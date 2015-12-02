@@ -24,7 +24,7 @@ else
     export DTR_PROTO=http;
 fi
 
-mkdir "$WERCKER_DEPLOY_TO_RANCHER_STACK_NAME"
+#mkdir "$WERCKER_DEPLOY_TO_RANCHER_STACK_NAME"
 ## Need to get environment id
 function get_env_id { curl -s "$DTR_PROTO://$WERCKER_DEPLOY_TO_RANCHER_ACCESS_KEY:$WERCKER_DEPLOY_TO_RANCHER_SECRET_KEY@$WERCKER_DEPLOY_TO_RANCHER_RANCHER_URL/environments?name=$WERCKER_DEPLOY_TO_RANCHER_STACK_NAME" | "$WERCKER_STEP_ROOT/jq" '.data[0].id' | sed s/\"//g; }
 
@@ -40,7 +40,7 @@ unzip -o file.zip
 
 # get old suffix
 #echo "$WERCKER_DEPLOY_TO_RANCHER_SERVICE_NAME"
-function get_old_service_name { sed -n "s/^\($WERCKER_DEPLOY_TO_RANCHER_SERVICE_NAME[^:]*\):[\r\n]\?$/\1/p" docker-compose.yml; }
+function get_old_service_name { sed -n "s/^\($WERCKER_DEPLOY_TO_RANCHER_SERVICE_NAME[^:]*\):[\r\n]$/\1/p" docker-compose.yml; }
 
 DTR_OLD_SERVICE_NAME=$(get_old_service_name)
 #echo "$DTR_OLD_SERVICE_NAME"
