@@ -1,5 +1,5 @@
 name: deploy-to-rancher
-version: 0.7.0
+version: 0.8.0
 description: Do a rolling update to a rancher service
 keywords:
   - deploy
@@ -34,5 +34,8 @@ properties:
     type: string
     required: true
   use_tag:
+    type: boolean
+    default: false
+  inplace:
     type: boolean
     default: false

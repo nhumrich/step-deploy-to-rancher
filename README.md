@@ -27,3 +27,6 @@ Example:
             docker_org: billybob  # name of organaztion
             docker_image: awesome
             use_tag: false
+            inplace: false
+
+Inplace upgrades added in 8.0. Just add the `inplace: true` section to the yaml
