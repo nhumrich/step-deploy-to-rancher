@@ -60,7 +60,7 @@ sed -i "s/^\(\s *image: $WERCKER_DEPLOY_TO_RANCHER_DOCKER_ORG\/$WERCKER_DEPLOY_T
 
 
 #do the deploy!
-if [ "$WERCKER_DEPLOY_TO_RANCHER_INPLACE" != true ]; then
+if [ "$WERCKER_DEPLOY_TO_RANCHER_INPLACE" == true ]; then
   # Echo the command cause it looks nice!
   echo "rancher-compose" --url "$DTR_PROTO://$WERCKER_DEPLOY_TO_RANCHER_RANCHER_URL" --access-key xxxx --secret-key xxxx --project-name "$WERCKER_DEPLOY_TO_RANCHER_STACK_NAME" up --upgrade "$WERCKER_DEPLOY_TO_RANCHER_SERVICE_NAME" --pull --confirm-upgrade --interval 30000 --batch-size 1
   "$WERCKER_STEP_ROOT/rancher-compose" --url "$DTR_PROTO://$WERCKER_DEPLOY_TO_RANCHER_RANCHER_URL" --access-key "$WERCKER_DEPLOY_TO_RANCHER_ACCESS_KEY" --secret-key "$WERCKER_DEPLOY_TO_RANCHER_SECRET_KEY" --project-name "$WERCKER_DEPLOY_TO_RANCHER_STACK_NAME" up --upgrade "$WERCKER_DEPLOY_TO_RANCHER_SERVICE_NAME" --pull --confirm-upgrade --interval 30000 --batch-size 1
