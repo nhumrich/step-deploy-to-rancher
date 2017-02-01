@@ -1,3 +1,11 @@
+# NO longer maintained
+
+This script is no longer maintained. I wrote a more feature filled one in python found here: https://github.com/nhumrich/deploy-to-rancher
+Please use that one for future support. It does require python 3.5, and isnt an official "wercker-step", but its more generic and works great with wercker pipelines.
+
+
+
+
 [![wercker status](https://app.wercker.com/status/ff788e3e0eb4b14e7c3363fb0f64789e/m/master "wercker status")](https://app.wercker.com/project/bykey/ff788e3e0eb4b14e7c3363fb0f64789e)[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 ## step-deploy-to-rancher
 
