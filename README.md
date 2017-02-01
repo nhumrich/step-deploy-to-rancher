@@ -1,4 +1,4 @@
-# NO longer maintained
+# No longer maintained
 
 This script is no longer maintained. I wrote a more feature filled one in python found here: https://github.com/nhumrich/deploy-to-rancher
 Please use that one for future support. It does require python 3.5, and isnt an official "wercker-step", but its more generic and works great with wercker pipelines.
